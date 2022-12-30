@@ -3,12 +3,6 @@
 
 <template>
   <div class="home">
-    <h1>Basic</h1>
-    <RouterLink to="/chapter1/01-container">01-container</RouterLink>
-    <RouterLink to="/chapter1/02-transparentBackground">02-transparentBackground</RouterLink>
-    <RouterLink to="/chapter1/03-tinting">03-tinting</RouterLink>
-    <RouterLink to="/chapter1/04-cacheAsBitmap">04-cacheAsBitmap</RouterLink>
-    
   </div>
   
 </template>
