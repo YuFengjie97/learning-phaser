@@ -28,8 +28,7 @@ canvas{
   display: block;
 }
 
-.pixiCon {
-  height: 100%;
+.viewCon{
   width: 100%;
-  background: url('@/assets/img/gridBg.png') repeat 56px 56px;
+  height: 100%;
 }

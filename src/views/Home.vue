@@ -3,6 +3,10 @@
 
 <template>
   <div class="home">
+    <RouterLink to="/01-helloworld">helloworld</RouterLink>
+
+
+    
   </div>
   
 </template>
