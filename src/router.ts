@@ -17,7 +17,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/02-beginer',
     component: () => import('@/views/02-beginer/index.vue'),
   },
-  
+  {
+    path: '/03-60fpsWalk',
+    component: () => import('@/views/03-60fpsWalk/index.vue'),
+  },
+  {
+    path: '/04-action/',
+    children: [
+      {path: 'PlaceOnEllipse', component:()=>import('@/views/04-action/PlaceOnEllipse.vue')}
+    ]
+  },
   { path: '/:path(.*)', component: NotFound },
 ]
 

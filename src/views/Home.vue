@@ -5,9 +5,11 @@
   <div class="home">
     <RouterLink to="/01-helloworld">helloworld</RouterLink>
     <RouterLink to="/02-beginer">beginer</RouterLink>
+    <RouterLink to="/03-60fpsWalk">60fpsWalk</RouterLink>
 
+    <h1>action</h1>
+    <RouterLink to="/04-action/PlaceOnEllipse">PlaceOnEllipse</RouterLink>
 
-    
   </div>
   
 </template>
