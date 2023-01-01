@@ -4,6 +4,7 @@
 <template>
   <div class="home">
     <RouterLink to="/01-helloworld">helloworld</RouterLink>
+    <RouterLink to="/02-beginer">beginer</RouterLink>
 
 
     

@@ -13,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/01-helloworld',
     component: () => import('@/views/01-helloworld/index.vue'),
   },
+  {
+    path: '/02-beginer',
+    component: () => import('@/views/02-beginer/index.vue'),
+  },
+  
   { path: '/:path(.*)', component: NotFound },
 ]
 
