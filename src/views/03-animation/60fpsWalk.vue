@@ -6,10 +6,10 @@
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
 
-import trees from '@/assets/img/03-60fpsWalk/trees.png?url'
-import sky from '@/assets/img/03-60fpsWalk/sky.png?url'
-import walker from '@/assets/img/03-60fpsWalk/walker.png?url'
-import walkerJson from '@/assets/img/03-60fpsWalk/walker.json?url'
+import trees from '@/assets/03-60fpsWalk/trees.png?url'
+import sky from '@/assets/03-60fpsWalk/sky.png?url'
+import walker from '@/assets/03-60fpsWalk/walker.png?url'
+import walkerJson from '@/assets/03-60fpsWalk/walker.json?url'
 
 const con = ref<HTMLElement>()
 

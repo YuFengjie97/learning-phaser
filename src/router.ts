@@ -35,6 +35,15 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
+  {
+    path: '/05-audio/',
+    children: [
+      {
+        path: 'AudioSprite',
+        component: () => import('@/views/05-audio/AudioSprite.vue'),
+      },
+    ],
+  },
   { path: '/:path(.*)', component: NotFound },
 ]
 

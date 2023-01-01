@@ -6,9 +6,9 @@
 import Phaser from 'phaser'
 import { onMounted, ref } from 'vue'
 
-import sky from '@/assets/img/01-helloworld/space3.png?url'
-import logo from '@/assets/img/01-helloworld/phaser3-logo.png?url'
-import red from '@/assets/img/01-helloworld/red.png?url'
+import sky from '@/assets/01-helloworld/space3.png?url'
+import logo from '@/assets/01-helloworld/phaser3-logo.png?url'
+import red from '@/assets/01-helloworld/red.png?url'
 
 const con = ref<HTMLElement>()
 let screanWidth: number

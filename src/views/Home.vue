@@ -12,6 +12,9 @@
     <h1>action</h1>
     <RouterLink to="/04-action/PlaceOnEllipse">PlaceOnEllipse</RouterLink>
 
+    <h1>audio</h1>
+    <RouterLink to="/05-audio/AudioSprite">audioSprite</RouterLink>
+
   </div>
   
 </template>

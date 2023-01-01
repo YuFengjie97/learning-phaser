@@ -5,11 +5,11 @@
 <script lang="ts" setup>
 import Phaser from 'phaser'
 import { onMounted, ref } from 'vue'
-import bombUrl from '@/assets/img/02-beginer/bomb.png?url'
-import dudeUrl from '@/assets/img/02-beginer/dude.png?url'
-import platformUrl from '@/assets/img/02-beginer/platform.png?url'
-import skyUrl from '@/assets/img/02-beginer/sky.png?url'
-import starUrl from '@/assets/img/02-beginer/star.png?url'
+import bombUrl from '@/assets/02-beginer/bomb.png?url'
+import dudeUrl from '@/assets/02-beginer/dude.png?url'
+import platformUrl from '@/assets/02-beginer/platform.png?url'
+import skyUrl from '@/assets/02-beginer/sky.png?url'
+import starUrl from '@/assets/02-beginer/star.png?url'
 
 const con = ref<HTMLElement>()
 let scene: Phaser.Scene
