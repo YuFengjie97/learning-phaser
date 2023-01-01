@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strictPropertyInitialization": false, // 关闭类属性非得在constructor中初始化
     "experimentalDecorators": true,
     "baseUrl": "./",
     "paths": {
