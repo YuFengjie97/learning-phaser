@@ -3,8 +3,11 @@
 
 <template>
   <div class="home">
-    <RouterLink to="/01-helloworld">helloworld</RouterLink>
-    <RouterLink to="/02-beginer">beginer</RouterLink>
+    <RouterLink to="/helloworld">helloworld</RouterLink>
+    <RouterLink to="/beginer">beginer</RouterLink>
+
+    <h1>basic</h1>
+    <RouterLink to="/00-basic/TextButton">TextButton</RouterLink>
 
     <h1>animation</h1>
     <RouterLink to="/03-animation/60fpsWalk">60fpsWalk</RouterLink>

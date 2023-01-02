@@ -10,12 +10,12 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: '/01-helloworld',
-    component: () => import('@/views/01-helloworld/index.vue'),
+    path: '/helloworld',
+    component: () => import('@/views/helloworld/index.vue'),
   },
   {
-    path: '/02-beginer',
-    component: () => import('@/views/02-beginer/index.vue'),
+    path: '/beginer',
+    component: () => import('@/views/beginer/index.vue'),
   },
   {
     path: '/03-animation/',
