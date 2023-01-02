@@ -18,6 +18,15 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/beginer/index.vue'),
   },
   {
+    path: '/00-basic/',
+    children: [
+      {
+        path: 'textButton',
+        component: () => import('@/views/00-basic/TextButton.vue'),
+      },
+    ],
+  },
+  {
     path: '/03-animation/',
     children: [
       {
