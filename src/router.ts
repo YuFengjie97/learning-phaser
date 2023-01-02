@@ -18,6 +18,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/beginer/index.vue'),
   },
   {
+    path: '/flappyBird',
+    component: () => import('@/views/flappyBird/index.vue'),
+  },
+  {
     path: '/00-basic/',
     children: [
       {

@@ -5,6 +5,7 @@
   <div class="home">
     <RouterLink to="/helloworld">helloworld</RouterLink>
     <RouterLink to="/beginer">beginer</RouterLink>
+    <RouterLink to="/flappyBird">flappyBird</RouterLink>
 
     <h1>basic</h1>
     <RouterLink to="/00-basic/TextButton">TextButton</RouterLink>
