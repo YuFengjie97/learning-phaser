@@ -51,7 +51,7 @@ class Scene extends Phaser.Scene {
 
     this.input.on(
       'gameobjectover',
-      function (pointer, button) {
+      (pointer: any, button: any) => {
         this.setButtonFrame(button, 0)
       },
       this
@@ -59,7 +59,7 @@ class Scene extends Phaser.Scene {
 
     this.input.on(
       'gameobjectout',
-      function (pointer, button) {
+      (pointer: any, button: any) => {
         this.setButtonFrame(button, 1)
       },
       this
@@ -67,7 +67,7 @@ class Scene extends Phaser.Scene {
 
     this.input.on(
       'gameobjectdown',
-      function (pointer, button) {
+      (pointer: any, button: any) => {
         this.sound.playAudioSprite('sfx', button.name)
         this.setButtonFrame(button, 2)
       },
@@ -76,7 +76,7 @@ class Scene extends Phaser.Scene {
 
     this.input.on(
       'gameobjectup',
-      function (pointer, button) {
+      (pointer: any, button: any) => {
         this.setButtonFrame(button, 0)
       },
       this
@@ -90,7 +90,7 @@ class Scene extends Phaser.Scene {
     const text = this.add.bitmapText(x - 40, y - 8, 'nokia', name, 16)
     text.x += (button.width - text.width) / 2
   }
-  setButtonFrame(button, frame) {
+  setButtonFrame(button: any, frame: any) {
     button.frame = button.scene.textures.getFrame('button', frame)
   }
 }

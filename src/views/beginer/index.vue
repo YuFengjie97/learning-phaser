@@ -146,20 +146,20 @@ function initBombs() {
   scene.physics.add.collider(player, bombs, hitBomb, undefined, scene)
 }
 
-function hitBomb(player, bomb) {
+function hitBomb(player: any, bomb: any) {
   scene.physics.pause()
   player.setTint(0xff0000)
   player.anims.play('turn')
   gameOver = true
 }
 
-function collectStar(player, star) {
+function collectStar(player: any, star: any) {
   star.disableBody(true, true)
   score += 10
   scoreText.setText('Score: ' + score)
 
   if (stars.countActive(true) === 0) {
-    stars.children.iterate(function (child) {
+    stars.children.iterate(function (child: any) {
       child.enableBody(true, child.x, 0, true, true)
     })
 
