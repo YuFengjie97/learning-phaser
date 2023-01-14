@@ -6,6 +6,7 @@
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
 import { config } from './config'
+import {getAssetsUrl} from '@/utils/index'
 import bgDay from '@/assets/flappyBird/sprites/background-day.png'
 import ground from '@/assets/flappyBird/sprites/ground-sprite.png'
 
@@ -17,17 +18,6 @@ import birdRed from '@/assets/flappyBird/sprites/bird-red-sprite.png'
 
 import pipeGreenTop from '@/assets/flappyBird/sprites/pipe-green-top.png'
 import pipeGreenBottom from '@/assets/flappyBird/sprites/pipe-green-bottom.png'
-
-import num0 from '@/assets/flappyBird/sprites/number0.png'
-import num1 from '@/assets/flappyBird/sprites/number1.png'
-import num2 from '@/assets/flappyBird/sprites/number2.png'
-import num3 from '@/assets/flappyBird/sprites/number3.png'
-import num4 from '@/assets/flappyBird/sprites/number4.png'
-import num5 from '@/assets/flappyBird/sprites/number5.png'
-import num6 from '@/assets/flappyBird/sprites/number6.png'
-import num7 from '@/assets/flappyBird/sprites/number7.png'
-import num8 from '@/assets/flappyBird/sprites/number8.png'
-import num9 from '@/assets/flappyBird/sprites/number9.png'
 
 import dieOgg from '@/assets/flappyBird/audio/die.ogg'
 import dieWav from '@/assets/flappyBird/audio/die.wav'
@@ -101,17 +91,16 @@ class Scene extends Phaser.Scene {
     this.load.image(config.restart.static, restart)
     this.load.image(config.pipe.top.static, pipeGreenTop)
     this.load.image(config.pipe.bottom.static, pipeGreenBottom)
-    console.log(num0);
-    this.load.image(config.nums.static.num0, num0)
-    this.load.image(config.nums.static.num1, num1)
-    this.load.image(config.nums.static.num2, num2)
-    this.load.image(config.nums.static.num3, num3)
-    this.load.image(config.nums.static.num4, num4)
-    this.load.image(config.nums.static.num5, num5)
-    this.load.image(config.nums.static.num6, num6)
-    this.load.image(config.nums.static.num7, num7)
-    this.load.image(config.nums.static.num8, num8)
-    this.load.image(config.nums.static.num9, num9)
+    this.load.image(config.nums.static.num0, getAssetsUrl('src/assets/flappyBird/sprites/number0.png'))
+    this.load.image(config.nums.static.num1, getAssetsUrl('src/assets/flappyBird/sprites/number1.png'))
+    this.load.image(config.nums.static.num2, getAssetsUrl('src/assets/flappyBird/sprites/number2.png'))
+    this.load.image(config.nums.static.num3, getAssetsUrl('src/assets/flappyBird/sprites/number3.png'))
+    this.load.image(config.nums.static.num4, getAssetsUrl('src/assets/flappyBird/sprites/number4.png'))
+    this.load.image(config.nums.static.num5, getAssetsUrl('src/assets/flappyBird/sprites/number5.png'))
+    this.load.image(config.nums.static.num6, getAssetsUrl('src/assets/flappyBird/sprites/number6.png'))
+    this.load.image(config.nums.static.num7, getAssetsUrl('src/assets/flappyBird/sprites/number7.png'))
+    this.load.image(config.nums.static.num8, getAssetsUrl('src/assets/flappyBird/sprites/number8.png'))
+    this.load.image(config.nums.static.num9, getAssetsUrl('src/assets/flappyBird/sprites/number9.png'))
     this.load.spritesheet(config.birdRed.static, birdRed, {
       frameWidth: 34,
       frameHeight: 24,
