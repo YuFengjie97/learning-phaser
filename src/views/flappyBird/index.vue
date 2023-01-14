@@ -13,11 +13,12 @@ const con = ref<HTMLElement>()
 type numsKey = keyof typeof config.nums.static
 
 onMounted(() => {
+  const {width, height} = config.scene
   const game = new Phaser.Game({
     type: Phaser.AUTO,
     parent: con.value,
-    width: 288,
-    height: 512,
+    width,
+    height,
     backgroundColor: 0xff0000,
     scene: [Scene],
     physics: {
@@ -31,8 +32,12 @@ onMounted(() => {
     },
   })
   const { innerWidth, innerHeight } = window
-
-  game.canvas.style.cssText = `width: ${innerWidth}px; height: ${innerHeight}px`
+  if(innerWidth < innerHeight) {
+    game.canvas.style.cssText = `width: ${innerWidth}px; height: ${innerHeight}px; margin: 0 auto`
+  } else {
+    let w = width / height * innerHeight
+    game.canvas.style.cssText = `width: ${w}px; height: ${innerHeight}px; margin: 0 auto`
+  }
 })
 
 class Scene extends Phaser.Scene {
