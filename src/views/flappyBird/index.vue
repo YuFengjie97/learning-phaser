@@ -62,7 +62,9 @@ onMounted(() => {
       },
     },
   })
-  game.canvas.style.cssText = `width: ${window.innerWidth}px; height: ${innerHeight}px`
+  const { innerWidth, innerHeight } = window
+
+  game.canvas.style.cssText = `width: ${innerWidth}px; height: ${innerHeight}px`
 })
 
 class Scene extends Phaser.Scene {
@@ -99,6 +101,7 @@ class Scene extends Phaser.Scene {
     this.load.image(config.restart.static, restart)
     this.load.image(config.pipe.top.static, pipeGreenTop)
     this.load.image(config.pipe.bottom.static, pipeGreenBottom)
+    console.log(num0);
     this.load.image(config.nums.static.num0, num0)
     this.load.image(config.nums.static.num1, num1)
     this.load.image(config.nums.static.num2, num2)
@@ -118,6 +121,7 @@ class Scene extends Phaser.Scene {
     this.load.audio(config.audio.point, [pointOgg, pointWav])
     this.load.audio(config.audio.swoosh, [swooshOgg, swooshWav])
     this.load.audio(config.audio.wing, [wingOgg, wingWav])
+    console.log('load down')
   }
   create() {
     const { width, height } = config.scene
