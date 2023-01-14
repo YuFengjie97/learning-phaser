@@ -8,7 +8,6 @@ import Phaser from 'phaser'
 import { config } from './config'
 import Preload from './Preload'
 import Game from './Game'
-import { getUrl } from '@/utils/index'
 
 const con = ref<HTMLElement>()
 
@@ -39,8 +38,6 @@ onMounted(() => {
     game.canvas.style.cssText = `width: ${w}px; height: ${innerHeight}px; margin: 0 auto`
   }
 })
-
-
 </script>
 
 <style lang="less" scoped>

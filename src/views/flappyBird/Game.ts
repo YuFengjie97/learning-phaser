@@ -1,5 +1,4 @@
 import Phaser from "phaser";
-import { getUrl } from '@/utils/index'
 import { config } from "./config";
 
 type numsKey = keyof typeof config.nums.static
@@ -35,6 +34,7 @@ export default class Game extends Phaser.Scene {
       .setOrigin(0, 0)
       .setInteractive()
       .on('pointerdown', () => {
+        if(!this.gameStart) return
         this.flap()
       })
 
