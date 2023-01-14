@@ -18,7 +18,7 @@ onMounted(() => {
     parent: con.value,
     width,
     height,
-    backgroundColor: 0xff0000,
+    // backgroundColor: 0xff0000,
     scene: [Preload, Game],
     physics: {
       default: 'arcade',
