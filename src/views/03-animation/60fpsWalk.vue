@@ -6,10 +6,7 @@
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
 
-import trees from '@/assets/03-60fpsWalk/trees.png?url'
-import sky from '@/assets/03-60fpsWalk/sky.png?url'
-import walker from '@/assets/03-60fpsWalk/walker.png?url'
-import walkerJson from '@/assets/03-60fpsWalk/walker.json?url'
+import { getUrl } from '@/utils'
 
 const con = ref<HTMLElement>()
 
@@ -31,9 +28,9 @@ class Scene extends Phaser.Scene {
     super('Game')
   }
   preload() {
-    this.load.atlas('walker', walker, walkerJson)
-    this.load.image('sky', sky)
-    this.load.image('trees', trees)
+    this.load.atlas('walker', getUrl('03-60fpsWalk/walker.png'), getUrl('03-60fpsWalk/walker.json'))
+    this.load.image('sky', getUrl('03-60fpsWalk/sky.png'))
+    this.load.image('trees', getUrl('03-60fpsWalk/trees.png'))
   }
   create() {
     this.bg = this.add.tileSprite(0, 38, 800, 296, 'sky').setOrigin(0, 0)

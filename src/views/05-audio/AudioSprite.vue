@@ -5,12 +5,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
-import bg from '@/assets/audioSprite/bg.png?url'
-import bt from '@/assets/audioSprite/bt.png?url'
-import text from '@/assets/audioSprite/nokia16black.png?url'
-import textXml from '@/assets/audioSprite/nokia16black.xml?url'
-import ogg from '@/assets/audioSprite/fx_mixdown.ogg?url'
-import oggJson from '@/assets/audioSprite/fx_mixdown.json?url'
+import { getUrl } from '@/utils'
 
 const con = ref<HTMLElement>()
 onMounted(() => {
@@ -33,10 +28,10 @@ class Scene extends Phaser.Scene {
     super('game')
   }
   preload() {
-    this.load.image('title', bg)
-    this.load.spritesheet('button', bt, { frameWidth: 80, frameHeight: 20 })
-    this.load.bitmapFont('nokia', text, textXml)
-    this.load.audioSprite('sfx', oggJson, [ogg])
+    this.load.image('title', getUrl('audioSprite/bg.png'))
+    this.load.spritesheet('button', getUrl('audioSprite/bt.png'), { frameWidth: 80, frameHeight: 20 })
+    this.load.bitmapFont('nokia', getUrl('audioSprite/nokia16black.png'), getUrl('audioSprite/nokia16black.xml'))
+    this.load.audioSprite('sfx', getUrl('audioSprite/fx_mixdown.json'), getUrl('audioSprite/fx_mixdown.ogg'))
   }
   create() {
     this.add.image(400, 300, 'title')

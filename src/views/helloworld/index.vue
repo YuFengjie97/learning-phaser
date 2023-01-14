@@ -5,10 +5,7 @@
 <script lang="ts" setup>
 import Phaser from 'phaser'
 import { onMounted, ref } from 'vue'
-
-import sky from '@/assets/01-helloworld/space3.png?url'
-import logo from '@/assets/01-helloworld/phaser3-logo.png?url'
-import red from '@/assets/01-helloworld/red.png?url'
+import { getUrl } from '@/utils'
 
 const con = ref<HTMLElement>()
 let screanWidth: number
@@ -37,9 +34,9 @@ onMounted(() => {
 })
 
 function preload(this: Phaser.Scene) {
-  this.load.image('sky', sky)
-  this.load.image('logo', logo)
-  this.load.image('red', red)
+  this.load.image('sky', getUrl('01-helloworld/space3.png'))
+  this.load.image('logo', getUrl('01-helloworld/phaser3-logo.png'))
+  this.load.image('red', getUrl('01-helloworld/red.png'))
 }
 
 function create(this: Phaser.Scene) {

@@ -5,11 +5,7 @@
 <script lang="ts" setup>
 import Phaser from 'phaser'
 import { onMounted, ref } from 'vue'
-import bombUrl from '@/assets/02-beginer/bomb.png?url'
-import dudeUrl from '@/assets/02-beginer/dude.png?url'
-import platformUrl from '@/assets/02-beginer/platform.png?url'
-import skyUrl from '@/assets/02-beginer/sky.png?url'
-import starUrl from '@/assets/02-beginer/star.png?url'
+import { getUrl } from '@/utils'
 
 const con = ref<HTMLElement>()
 let scene: Phaser.Scene
@@ -46,11 +42,11 @@ onMounted(() => {
 })
 function preload(this: Phaser.Scene) {
   scene = this
-  scene.load.image('sky', skyUrl)
-  scene.load.image('ground', platformUrl)
-  scene.load.image('star', starUrl)
-  scene.load.image('bomb', bombUrl)
-  scene.load.spritesheet('dude', dudeUrl, {
+  scene.load.image('sky', getUrl('02-beginer/sky.png'))
+  scene.load.image('ground', getUrl('02-beginer/platform.png'))
+  scene.load.image('star', getUrl('02-beginer/star.png'))
+  scene.load.image('bomb', getUrl('02-beginer/bomb.png'))
+  scene.load.spritesheet('dude', getUrl('02-beginer/dude.png'), {
     frameWidth: 32,
     frameHeight: 48,
   })

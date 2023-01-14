@@ -14,7 +14,7 @@
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
 
-import ball from '@/assets/img/ball.png?url'
+import { getUrl } from '@/utils';
 
 const con = ref<HTMLElement>()
 onMounted(() => {
@@ -35,7 +35,7 @@ class Scene extends Phaser.Scene {
     super('game')
   }
   preload() {
-    this.load.image('ball', ball)
+    this.load.image('ball', getUrl('ball.png'))
   }
   create() {
     this.ellipse = new Phaser.Geom.Ellipse(400, 300, 200, 500)
