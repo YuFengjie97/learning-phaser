@@ -6,7 +6,7 @@
 import { onMounted, ref } from 'vue'
 import Phaser from 'phaser'
 import { config } from './config'
-import {getAssetsUrl} from '@/utils/index'
+import { getUrl } from '@/utils/index'
 
 const con = ref<HTMLElement>()
 
@@ -59,35 +59,70 @@ class Scene extends Phaser.Scene {
     super('flappyBird')
   }
   preload() {
-    this.load.image(config.bg.static, '/flappyBird/sprites/background-day.png')
-    this.load.spritesheet(config.ground.static, '/flappyBird/sprites/ground-sprite.png', {
-      frameWidth: 336,
-      frameHeight: 112,
-    })
-    this.load.image(config.startMenu.static, '/flappyBird/sprites/message-initial.png')
-    this.load.image(config.gameOver.static, '/flappyBird/sprites/gameover.png')
-    this.load.image(config.restart.static, '/flappyBird/sprites/restart-button.png')
-    this.load.image(config.pipe.top.static, '/flappyBird/sprites/pipe-green-top.png')
-    this.load.image(config.pipe.bottom.static, '/flappyBird/sprites/pipe-green-bottom.png')
-    this.load.image(config.nums.static.num0, '/flappyBird/sprites/number0.png')
-    this.load.image(config.nums.static.num1, '/flappyBird/sprites/number1.png')
-    this.load.image(config.nums.static.num2, '/flappyBird/sprites/number2.png')
-    this.load.image(config.nums.static.num3, '/flappyBird/sprites/number3.png')
-    this.load.image(config.nums.static.num4, '/flappyBird/sprites/number4.png')
-    this.load.image(config.nums.static.num5, '/flappyBird/sprites/number5.png')
-    this.load.image(config.nums.static.num6, '/flappyBird/sprites/number6.png')
-    this.load.image(config.nums.static.num7, '/flappyBird/sprites/number7.png')
-    this.load.image(config.nums.static.num8, '/flappyBird/sprites/number8.png')
-    this.load.image(config.nums.static.num9, '/flappyBird/sprites/number9.png')
-    this.load.spritesheet(config.birdRed.static, '/flappyBird/sprites/bird-red-sprite.png', {
-      frameWidth: 34,
-      frameHeight: 24,
-    })
-    this.load.audio(config.audio.die, ['/flappyBird/audio/die.ogg', '/flappyBird/audio/die.wav'])
-    this.load.audio(config.audio.hit, ['/flappyBird/audio/hit.ogg', '/flappyBird/audio/hit.wav'])
-    this.load.audio(config.audio.point, ['/flappyBird/audio/point.ogg', '/flappyBird/audio/point.wav'])
-    this.load.audio(config.audio.swoosh, ['/flappyBird/audio/swoosh.ogg', '/flappyBird/audio/swoosh.wav'])
-    this.load.audio(config.audio.wing, ['/flappyBird/audio/wing.ogg', '/flappyBird/audio/wing.wav'])
+    this.load.image(config.bg.static, getUrl('flappyBird/sprites/background-day.png'))
+    this.load.spritesheet(
+      config.ground.static,
+      getUrl('flappyBird/sprites/ground-sprite.png'),
+      {
+        frameWidth: 336,
+        frameHeight: 112,
+      }
+    )
+    this.load.image(
+      config.startMenu.static,
+      getUrl('flappyBird/sprites/message-initial.png')
+    )
+    this.load.image(config.gameOver.static, getUrl('flappyBird/sprites/gameover.png'))
+    this.load.image(
+      config.restart.static,
+      getUrl('flappyBird/sprites/restart-button.png')
+    )
+    this.load.image(
+      config.pipe.top.static,
+      getUrl('flappyBird/sprites/pipe-green-top.png')
+    )
+    this.load.image(
+      config.pipe.bottom.static,
+      getUrl('flappyBird/sprites/pipe-green-bottom.png')
+    )
+    this.load.image(config.nums.static.num0, getUrl('flappyBird/sprites/number0.png'))
+    this.load.image(config.nums.static.num1, getUrl('flappyBird/sprites/number1.png'))
+    this.load.image(config.nums.static.num2, getUrl('flappyBird/sprites/number2.png'))
+    this.load.image(config.nums.static.num3, getUrl('flappyBird/sprites/number3.png'))
+    this.load.image(config.nums.static.num4, getUrl('flappyBird/sprites/number4.png'))
+    this.load.image(config.nums.static.num5, getUrl('flappyBird/sprites/number5.png'))
+    this.load.image(config.nums.static.num6, getUrl('flappyBird/sprites/number6.png'))
+    this.load.image(config.nums.static.num7, getUrl('flappyBird/sprites/number7.png'))
+    this.load.image(config.nums.static.num8, getUrl('flappyBird/sprites/number8.png'))
+    this.load.image(config.nums.static.num9, getUrl('flappyBird/sprites/number9.png'))
+    this.load.spritesheet(
+      config.birdRed.static,
+      getUrl('flappyBird/sprites/bird-red-sprite.png'),
+      {
+        frameWidth: 34,
+        frameHeight: 24,
+      }
+    )
+    this.load.audio(config.audio.die, [
+      getUrl('flappyBird/audio/die.ogg'),
+      getUrl('flappyBird/audio/die.wav'),
+    ])
+    this.load.audio(config.audio.hit, [
+      getUrl('flappyBird/audio/hit.ogg'),
+      getUrl('flappyBird/audio/hit.wav'),
+    ])
+    this.load.audio(config.audio.point, [
+      getUrl('flappyBird/audio/point.ogg'),
+      getUrl('flappyBird/audio/point.wav'),
+    ])
+    this.load.audio(config.audio.swoosh, [
+      getUrl('flappyBird/audio/swoosh.ogg'),
+      getUrl('flappyBird/audio/swoosh.wav'),
+    ])
+    this.load.audio(config.audio.wing, [
+      getUrl('flappyBird/audio/wing.ogg'),
+      getUrl('flappyBird/audio/wing.wav'),
+    ])
     console.log('load down')
   }
   create() {
