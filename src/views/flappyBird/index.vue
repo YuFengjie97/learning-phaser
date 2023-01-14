@@ -29,6 +29,17 @@ import num7 from '@/assets/flappyBird/sprites/number7.png?url'
 import num8 from '@/assets/flappyBird/sprites/number8.png?url'
 import num9 from '@/assets/flappyBird/sprites/number9.png?url'
 
+import dieOgg from '@/assets/flappyBird/audio/die.ogg?url'
+import dieWav from '@/assets/flappyBird/audio/die.wav?url'
+import hitOgg from '@/assets/flappyBird/audio/hit.ogg?url'
+import hitWav from '@/assets/flappyBird/audio/hit.wav?url'
+import pointOgg from '@/assets/flappyBird/audio/point.ogg?url'
+import pointWav from '@/assets/flappyBird/audio/point.wav?url'
+import swooshOgg from '@/assets/flappyBird/audio/swoosh.ogg?url'
+import swooshWav from '@/assets/flappyBird/audio/swoosh.wav?url'
+import wingOgg from '@/assets/flappyBird/audio/wing.ogg?url'
+import wingWav from '@/assets/flappyBird/audio/wing.wav?url'
+
 const con = ref<HTMLElement>()
 
 type numsKey = keyof typeof config.nums.static
@@ -68,6 +79,11 @@ class Scene extends Phaser.Scene {
   scoreGroup: Phaser.Physics.Arcade.StaticGroup
   nextPipe = 0
   upButton: Phaser.Input.Keyboard.Key
+  soundHit: Phaser.Sound.BaseSound
+  soundDie: Phaser.Sound.BaseSound
+  soundSwoosh: Phaser.Sound.BaseSound
+  soundWing: Phaser.Sound.BaseSound
+  soundPoint: Phaser.Sound.BaseSound
   constructor() {
     super('flappyBird')
   }
@@ -96,6 +112,11 @@ class Scene extends Phaser.Scene {
       frameWidth: 34,
       frameHeight: 24,
     })
+    this.load.audio(config.audio.die, [dieOgg, dieWav])
+    this.load.audio(config.audio.hit, [hitOgg, hitWav])
+    this.load.audio(config.audio.point, [pointOgg, pointWav])
+    this.load.audio(config.audio.swoosh, [swooshOgg, swooshWav])
+    this.load.audio(config.audio.wing, [wingOgg, wingWav])
   }
   create() {
     const { width, height } = config.scene
@@ -188,6 +209,12 @@ class Scene extends Phaser.Scene {
       Phaser.Input.Keyboard.KeyCodes.SPACE
     )
 
+    this.soundDie = this.sound.add(config.audio.die)
+    this.soundHit = this.sound.add(config.audio.hit)
+    this.soundWing = this.sound.add(config.audio.wing)
+    this.soundSwoosh = this.sound.add(config.audio.swoosh)
+    this.soundPoint = this.sound.add(config.audio.point)
+
     this.prepareGame()
   }
   update() {
@@ -249,6 +276,7 @@ class Scene extends Phaser.Scene {
 
   flap() {
     if (this.gameOver) return
+    this.soundWing.play()
     this.player.setVelocityY(-config.player.flapSpeed)
     this.player.angle = -15
   }
@@ -306,12 +334,14 @@ class Scene extends Phaser.Scene {
     this.nextPipe++
     if (this.nextPipe % config.pipe.timeGap === 0) {
       this.createPipe()
+      this.soundSwoosh.play()
     }
   }
 
   hitBird() {
     console.log('gameover')
-
+    this.soundHit.play()
+    this.soundDie.play()
     this.physics.pause()
     this.gameOver = true
     this.ground.anims.play(config.ground.animate.stop, true)
@@ -322,6 +352,7 @@ class Scene extends Phaser.Scene {
   }
   updateScore(player: any, gap: any) {
     gap.destroy()
+    this.soundPoint.play()
     this.score++
     this.updateScoreBoard()
   }

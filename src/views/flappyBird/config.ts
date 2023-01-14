@@ -1,4 +1,11 @@
 export const config = {
+  audio: {
+    die: 'die',
+    hit: 'hit',
+    point: 'point',
+    swoosh: 'swoosh',
+    wing: 'wing'
+  },
   scene: {
     width: 288,
     height: 512,
