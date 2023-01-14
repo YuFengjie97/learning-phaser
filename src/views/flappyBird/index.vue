@@ -45,12 +45,12 @@ const con = ref<HTMLElement>()
 type numsKey = keyof typeof config.nums.static
 
 onMounted(() => {
-  new Phaser.Game({
+  const game = new Phaser.Game({
     type: Phaser.AUTO,
     parent: con.value,
     width: 288,
     height: 512,
-    // backgroundColor: 0xff0000,
+    backgroundColor: 0xff0000,
     scene: [Scene],
     physics: {
       default: 'arcade',
@@ -62,6 +62,7 @@ onMounted(() => {
       },
     },
   })
+  game.canvas.style.cssText = `width: ${window.innerWidth}px; height: ${innerHeight}px`
 })
 
 class Scene extends Phaser.Scene {
