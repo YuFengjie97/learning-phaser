@@ -37,6 +37,10 @@ const routes: Array<RouteRecordRaw> = [
         path: '60fpsWalk',
         component: () => import('@/views/03-animation/60fpsWalk.vue'),
       },
+      {
+        path: 'knight',
+        component: () => import('@/views/03-animation/knight/index.vue'),
+      },
     ],
   },
   {

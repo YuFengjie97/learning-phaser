@@ -3,6 +3,7 @@
 
 <template>
   <div class="home">
+    <h1>beginer</h1>
     <RouterLink to="/helloworld">helloworld</RouterLink>
     <RouterLink to="/beginer">beginer</RouterLink>
     <RouterLink to="/flappyBird">flappyBird</RouterLink>
@@ -12,6 +13,7 @@
 
     <h1>animation</h1>
     <RouterLink to="/03-animation/60fpsWalk">60fpsWalk</RouterLink>
+    <RouterLink to="/03-animation/knight">knight</RouterLink>
 
     <h1>action</h1>
     <RouterLink to="/04-action/PlaceOnEllipse">PlaceOnEllipse</RouterLink>
