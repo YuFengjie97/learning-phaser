@@ -5,26 +5,11 @@ import config from './config'
 const {
   idle,
   attack,
-  attack2,
   crouch,
   crouchWalk,
   crouchAttack,
-  dash,
-  death,
-  fall,
-  hit,
   jump,
-  jumpFallInBetween,
-  roll,
   run,
-  slide,
-  slideFull,
-  slideTransitionEnd,
-  slideTransitionStart,
-  turnAround,
-  wallClimb,
-  wallHang,
-  wallSlide,
 } = config.player.animation
 
 type Sheet = {
@@ -57,26 +42,11 @@ export default class Preload extends Phaser.Scene {
     })
     this.loadPlayerSheet(idle)
     this.loadPlayerSheet(attack)
-    this.loadPlayerSheet(attack2)
     this.loadPlayerSheet(crouch)
     this.loadPlayerSheet(crouchWalk)
     this.loadPlayerSheet(crouchAttack)
-    this.loadPlayerSheet(dash)
-    this.loadPlayerSheet(death)
-    this.loadPlayerSheet(fall)
-    this.loadPlayerSheet(hit)
     this.loadPlayerSheet(jump)
-    this.loadPlayerSheet(jumpFallInBetween)
-    this.loadPlayerSheet(roll)
     this.loadPlayerSheet(run)
-    this.loadPlayerSheet(slide)
-    this.loadPlayerSheet(slideFull)
-    this.loadPlayerSheet(slideTransitionEnd)
-    this.loadPlayerSheet(slideTransitionStart)
-    this.loadPlayerSheet(turnAround)
-    this.loadPlayerSheet(wallClimb)
-    this.loadPlayerSheet(wallHang)
-    this.loadPlayerSheet(wallSlide)
   }
 
   create() {

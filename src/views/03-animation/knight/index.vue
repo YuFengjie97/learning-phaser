@@ -27,7 +27,7 @@ onMounted(()=>{
         gravity: {
           y: gravity, // 默认重力，不同sprite可以单独设置
         },
-        debug: false,
+        debug: true,
       },
     },
   })
