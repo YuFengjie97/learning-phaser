@@ -3,10 +3,13 @@
 
 <template>
   <div class="home">
+    <h1>fullGame</h1>
+    <RouterLink to="/flappyBird">flappyBird</RouterLink>
+    <RouterLink to="/hitBrick">hitBrick</RouterLink>
+
     <h1>beginer</h1>
     <RouterLink to="/helloworld">helloworld</RouterLink>
     <RouterLink to="/beginer">beginer</RouterLink>
-    <RouterLink to="/flappyBird">flappyBird</RouterLink>
 
     <h1>basic</h1>
     <RouterLink to="/00-basic/TextButton">TextButton</RouterLink>

@@ -22,6 +22,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/flappyBird/index.vue'),
   },
   {
+    path: '/hitBrick',
+    component: () => import('@/views/HitBrick/index.vue'),
+  },
+  {
     path: '/00-basic/',
     children: [
       {
