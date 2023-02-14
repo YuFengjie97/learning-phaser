@@ -1,4 +1,7 @@
 export const config = {
+  textures: {
+    key: 'flappyBird'
+  },
   audio: {
     die: 'die',
     hit: 'hit',
@@ -16,16 +19,16 @@ export const config = {
     flapSpeed: 200,
   },
   bg: {
-    static: 'bgDay',
+    static: 'background-day.png',
   },
   startMenu: {
-    static: 'startMenu',
+    static: 'message-initial.png',
   },
   gameOver: {
-    static: 'gameOver',
+    static: 'gameover.png',
   },
   restart: {
-    static: 'restart',
+    static: 'restart-button.png',
   },
   pipe: {
     // 管道图片分辨率，加载素材后，是按照图片默认分辨率显示大小
@@ -35,10 +38,10 @@ export const config = {
     gap: 140,
     timeGap: 130, // 时间单位
     top: {
-      static: 'pipeTop',
+      static: 'pipe-green-top.png',
     },
     bottom: {
-      static: 'pipeBottom',
+      static: 'pipe-green-bottom.png',
     },
   },
   ground: {
@@ -59,16 +62,16 @@ export const config = {
     widht: 24,
     height: 36,
     static: {
-      num0: 'num0',
-      num1: 'num1',
-      num2: 'num2',
-      num3: 'num3',
-      num4: 'num4',
-      num5: 'num5',
-      num6: 'num6',
-      num7: 'num7',
-      num8: 'num8',
-      num9: 'num9',
+      num0: 'number0.png',
+      num1: 'number1.png',
+      num2: 'number2.png',
+      num3: 'number3.png',
+      num4: 'number4.png',
+      num5: 'number5.png',
+      num6: 'number6.png',
+      num7: 'number7.png',
+      num8: 'number8.png',
+      num9: 'number9.png',
     }
   },
 }

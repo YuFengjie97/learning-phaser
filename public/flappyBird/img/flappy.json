@@ -1,0 +1,419 @@
+{
+	"textures": [
+		{
+			"image": "flappy.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 484,
+				"h": 1028
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "background-day.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 288,
+						"h": 512
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 288,
+						"h": 512
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 288,
+						"h": 512
+					}
+				},
+				{
+					"filename": "background-night.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 288,
+						"h": 512
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 288,
+						"h": 512
+					},
+					"frame": {
+						"x": 1,
+						"y": 515,
+						"w": 288,
+						"h": 512
+					}
+				},
+				{
+					"filename": "gameover.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 192,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 192,
+						"h": 42
+					},
+					"frame": {
+						"x": 291,
+						"y": 1,
+						"w": 192,
+						"h": 42
+					}
+				},
+				{
+					"filename": "message-initial.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 184,
+						"h": 267
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 184,
+						"h": 267
+					},
+					"frame": {
+						"x": 291,
+						"y": 45,
+						"w": 184,
+						"h": 267
+					}
+				},
+				{
+					"filename": "restart-button.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 107,
+						"h": 38
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 107,
+						"h": 38
+					},
+					"frame": {
+						"x": 291,
+						"y": 314,
+						"w": 107,
+						"h": 38
+					}
+				},
+				{
+					"filename": "pipe-green-bottom.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 52,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 52,
+						"h": 320
+					},
+					"frame": {
+						"x": 400,
+						"y": 314,
+						"w": 52,
+						"h": 320
+					}
+				},
+				{
+					"filename": "number0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 314,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 352,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 390,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 428,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 466,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 504,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 542,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 580,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "number9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 36
+					},
+					"frame": {
+						"x": 454,
+						"y": 618,
+						"w": 24,
+						"h": 36
+					}
+				},
+				{
+					"filename": "pipe-green-top.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 52,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 52,
+						"h": 320
+					},
+					"frame": {
+						"x": 291,
+						"y": 656,
+						"w": 52,
+						"h": 320
+					}
+				},
+				{
+					"filename": "pipe-red-bottom.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 52,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 52,
+						"h": 320
+					},
+					"frame": {
+						"x": 345,
+						"y": 354,
+						"w": 52,
+						"h": 320
+					}
+				},
+				{
+					"filename": "pipe-red-top.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 52,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 52,
+						"h": 320
+					},
+					"frame": {
+						"x": 399,
+						"y": 636,
+						"w": 52,
+						"h": 320
+					}
+				},
+				{
+					"filename": "number1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 36
+					},
+					"frame": {
+						"x": 291,
+						"y": 978,
+						"w": 16,
+						"h": 36
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9314719fe6afe867019db146eb1e32a7:dcc9d5f316e614d50f1c5c92fac63675:e5f116c42a67fac91c23e059d5eeab2d$"
+	}
+}

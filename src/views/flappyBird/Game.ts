@@ -1,6 +1,8 @@
 import Phaser from "phaser";
 import { config } from "./config";
 
+const {textures: {key}} = config
+
 type numsKey = keyof typeof config.nums.static
 
 export default class Game extends Phaser.Scene {
@@ -30,7 +32,7 @@ export default class Game extends Phaser.Scene {
   create() {
     const { width, height } = config.scene
     this.bg = this.add
-      .image(0, 0, config.bg.static)
+      .image(0, 0, key,config.bg.static)
       .setOrigin(0, 0)
       .setInteractive()
       .on('pointerdown', () => {
@@ -94,6 +96,7 @@ export default class Game extends Phaser.Scene {
     this.startMenu = this.add.image(
       width / 2,
       height / 2,
+      key,
       config.startMenu.static
     )
     this.startMenu.setDepth(30)
@@ -103,10 +106,10 @@ export default class Game extends Phaser.Scene {
     this.startMenu.visible = false
 
     // 添加gameover提示
-    this.gameOverInfo = this.add.image(width / 2, 200, config.gameOver.static)
+    this.gameOverInfo = this.add.image(width / 2, 200,key, config.gameOver.static)
     this.gameOverInfo.visible = false
     this.restart = this.add
-      .image(width / 2, 300, config.restart.static)
+      .image(width / 2, 300, key, config.restart.static)
       .setInteractive()
       .on('pointerdown', () => {
         this.reStart()
@@ -206,6 +209,7 @@ export default class Game extends Phaser.Scene {
     const pipeTop = this.pipesGroup.create(
       sceneWidth + pipeWidth / 2,
       pipeTopY,
+      key,
       config.pipe.top.static
     ) as any
     pipeTop.body.allowGravity = false
@@ -214,6 +218,7 @@ export default class Game extends Phaser.Scene {
     const pipeBottom = this.pipesGroup.create(
       sceneWidth + pipeWidth / 2,
       pipeTopY + config.pipe.height + pipeGap,
+      key,
       config.pipe.bottom.static
     )
     pipeBottom.body.allowGravity = false
@@ -277,7 +282,7 @@ export default class Game extends Phaser.Scene {
     for (let i = 0; i < len; i++) {
       const k = `num${scoreStr[i]}` as numsKey
       // prettier-ignore
-      const n = this.scoreGroup.create(startPos + numWidth * i ,30, config.nums.static[k])
+      const n = this.scoreGroup.create(startPos + numWidth * i ,30, key, config.nums.static[k])
       n.setDepth(30)
     }
   }
